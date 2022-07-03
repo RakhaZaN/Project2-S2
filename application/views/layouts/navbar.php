@@ -38,6 +38,7 @@
 		</li> -->
 
 		<!-- User Dropdown Menu -->
+		<?php if($this->session->has_userdata('isLogin') && $this->session->userdata('isLogin') == true) { ?>
 		<li class="nav-item dropdown user-menu">
 			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
 				<img src="<?= base_url('public/img/user2-160x160.jpg') ?>" class="user-image img-circle elevation-2" alt="User Image">
@@ -55,6 +56,11 @@
 				<span class="dropdown-footer"></span>
 			</div>
 		</li>
+		<?php } else { ?>
+			<li class="nav-item">
+				<a href="#" class="btn btn-primary">Login</a>
+			</li>
+		<?php } ?>
 	</ul>
 </nav>
 <!-- /.navbar -->
