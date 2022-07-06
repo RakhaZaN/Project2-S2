@@ -12,4 +12,6 @@ class Home extends CI_Controller
         $this->load->view('dashboard', $data);
         $this->load->view('layouts/footer');
     }
+
+   
 }

@@ -8,7 +8,20 @@
 
 	<!-- Sidebar -->
 	<div class="sidebar">
-
+		<div class="user-panel mt-3 pb-3 mb-3 d-flex">
+			<div class="image">
+				<img src="<?php echo base_url("public/img/user2-160x160.jpg")?>" class="img-circle elevation-2" alt="User Image">
+			</div>
+			<div class="info">
+				<a href="#" class="d-block">
+					<?php
+					if($this->session->has_userdata('USERNAME')){
+						echo $this->session->userdata('USERNAME');
+					}
+					?>
+				</a>
+			</div>
+      	</div>
 		<!-- SidebarSearch Form -->
 		<!-- <div class="form-inline">
 			<div class="input-group" data-widget="sidebar-search">

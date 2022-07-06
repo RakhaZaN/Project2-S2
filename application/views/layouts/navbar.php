@@ -58,7 +58,7 @@
 		</li>
 		<?php } else { ?>
 			<li class="nav-item">
-				<a href="#" class="btn btn-primary">Login</a>
+				<a href="<?php echo base_url('Users/login')?>" class="btn btn-primary">Login</a>
 			</li>
 		<?php } ?>
 	</ul>
