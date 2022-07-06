@@ -22,7 +22,7 @@
     <div class="card-body register-card-body">
       <p class="login-box-msg">Register a new membership</p>
 
-      <?=form_open('Users/register','',['role'=>'public','status'=>'1'])?>
+      <?=form_open('Users/register','',['status'=>'1','role'=>'public'])?>
         <div class="input-group mb-3">
           <input type="text" class="form-control" name="username" placeholder="Username">
           <div class="input-group-append">

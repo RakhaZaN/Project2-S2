@@ -34,7 +34,26 @@ class Users extends CI_Controller{
     }
 
     public function register(){
+        $this->users;
+        $_username = $this->input->post('username');
+        $_password = $this->input->post('password');
+        $_email = $this->input->post('email');
+        // $_created_at = $this->input->post('created_at');
+        // $_last_join = $this->input->post('last_login');
+        $_status = $this->input->post('status');
+        $_role = $this->input->post('role');
 
+        $data_register[] = $_username;
+        $data_register[] = $_password;
+        $data_register[] = $_email;
+        // $data_register[] = $_created_at;
+        // $data_register[] = $_last_join;
+        $data_register[] = $_status;
+        $data_register[] = $_role;
+
+        $this->users->save($data_register);
+
+        redirect(base_url().'Users/login');
     }
 }
 ?>
