@@ -35,6 +35,7 @@
 		<div class="row justify-content-center">
 			<div class="col-6">
 				<div class="card overflow-hidden mt-4">
+                    <?php echo form_open('Users/update')?>
 					<table class="table table-striped">
                         <tr>
                             <td style="width: 30%">Username</td>
@@ -47,17 +48,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>password</td>
-                            <td>: 
-
-                            </td>
-                        </tr>
-                        <tr>
                             <td>Email</td>
                             <td>: 
                                 <?php
-                                if($this->session->has_userdata('EMAIL')){
-                                    echo $this->session->userdata('EMAIL');
+                                if($this->session->has_userdata('USER')){
+                                    echo $this->session->userdata('USER')->email;
                                 }
                                 ?>
                             </td>
@@ -73,7 +68,10 @@
                             </td>
                         </tr>
                     </table>
-				</div>
+                    <div class="row justify-content-center">
+                        <a href="<?=base_url('Users/edit')?>" class="btn btn-primary mb-2">Edit</a>
+                    </div>
+                </div>
 			</div>
 		</div>
 		<!-- /.content -->
