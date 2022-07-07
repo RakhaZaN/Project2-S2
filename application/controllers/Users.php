@@ -38,7 +38,6 @@ class Users extends CI_Controller{
     }
 
     public function register(){
-        $this->users;
         $_username = $this->input->post('username');
         $_password = $this->input->post('password');
         $_email = $this->input->post('email');
@@ -97,5 +96,11 @@ class Users extends CI_Controller{
 
         redirect(base_url().'Users/profile');
     }
+
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		redirect(base_url());
+	}
 }
 ?>

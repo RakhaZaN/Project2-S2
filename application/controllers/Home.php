@@ -16,12 +16,13 @@ class Home extends CI_Controller
     {
 		$data['page'] = "Home";
 
-		$data['list_user'] = $this->user->getAll();
-		$data['list_tempat_wisata'] = $this->tw->getAll();
-		$data['list_jenis_wisata'] = $this->jw->getAll();
-		$data['list_kecamatan'] = $this->k->getAll();
+		$data['list_tempat_wisata'] = $this->tw->getAllJoin();
+		// var_dump($data['list_tempat_wisata']);die;
 
+        $this->load->view('layouts/public/header', $data);
+        $this->load->view('layouts/public/navbar');
         $this->load->view('landing', $data);
+        $this->load->view('layouts/public/footer');
     }
 
 	public function admin()

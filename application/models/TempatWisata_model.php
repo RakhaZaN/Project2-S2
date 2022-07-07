@@ -12,6 +12,17 @@ class TempatWisata_model extends CI_Model {
         return $query->result();
     }
 
+    public function getAllJoin()
+    {
+        // Query
+		$this->db->select('*, jw.nama as jenis, k.nama as kecamatan');
+		$this->db->from('tempat_wisata tw');
+		$this->db->join('jenis_wisata jw', 'jw.id=tw.jenis_id', 'left');
+		$this->db->join('kecamatan k', 'k.id=tw.kecamatan_id', 'left');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
 	public function find($value, $field='id')
 	{
 		// Query

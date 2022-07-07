@@ -33,11 +33,10 @@ class TempatWisata extends CI_Controller {
 		$find = $this->tw->find($id);
 		$data['data'] = $find;
 
-		$this->load->view('layouts/header', $data);
-		$this->load->view('layouts/navbar');
-		$this->load->view('layouts/sidebar');
+		$this->load->view('layouts/public/header', $data);
+		$this->load->view('layouts/public/navbar');
 		$this->load->view('pages/tempat_wisata/detail', $data);
-		$this->load->view('layouts/footer');
+		$this->load->view('layouts/public/footer');
 	}
 
 	public function create()
