@@ -40,7 +40,7 @@
 				<!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 				<li class="nav-item">
-					<a href="<?= base_url() ?>" class="nav-link active">
+					<a href="<?= base_url('home/admin') ?>" class="nav-link <?= $this->uri->segment(1) == 'home' ? 'active':'' ?>">
 						<i class="nav-icon fas fa-square"></i>
 						<p>
 							Dashboard
@@ -48,7 +48,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?= base_url('tempatwisata/') ?>" class="nav-link">
+					<a href="<?= base_url('tempatwisata/') ?>" class="nav-link <?= $this->uri->segment(1) == 'tempatwisata' ? 'active':'' ?>">
 						<i class="nav-icon fas fa-mountain"></i>
 						<p>
 							Tempat Wisata
@@ -56,7 +56,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?= base_url('jeniswisata/') ?>" class="nav-link">
+					<a href="<?= base_url('jeniswisata/') ?>" class="nav-link <?= $this->uri->segment(1) == 'jeniswisata' ? 'active':'' ?>">
 						<i class="nav-icon fas fa-list-ul"></i>
 						<p>
 							Jenis Wisata
@@ -64,7 +64,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?= base_url('kecamatan/') ?>" class="nav-link">
+					<a href="<?= base_url('kecamatan/') ?>" class="nav-link <?= $this->uri->segment(1) == 'kecamatan' ? 'active':'' ?>">
 						<i class="nav-icon fas fa-map"></i>
 						<p>
 							Kecamatan
@@ -72,7 +72,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?= base_url('kecamatan/') ?>" class="nav-link">
+					<a href="<?= base_url('user/') ?>" class="nav-link <?= $this->uri->segment(1) == 'user' ? 'active':'' ?>">
 						<i class="nav-icon fas fa-users"></i>
 						<p>
 							Akun

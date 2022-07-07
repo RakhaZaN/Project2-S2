@@ -33,6 +33,7 @@
 							<tr>
 								<th class="text-center">No</th>
 								<th>Nama</th>
+								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>

@@ -24,7 +24,7 @@
 			<div class="col-md-3 col-sm-6">
 				<div class="small-box bg-primary">
 					<div class="inner">
-						<h3>100</h3>
+						<h3><?= count($list_user) ?></h3>
 						<p>Pengguna</p>
 					</div>
 					<div class="icon">
@@ -35,7 +35,7 @@
 			<div class="col-md-3 col-sm-6">
 				<div class="small-box bg-info">
 					<div class="inner">
-						<h3>100</h3>
+						<h3><?= count($list_tempat_wisata) ?></h3>
 						<p>Tempat Wisata</p>
 					</div>
 					<div class="icon">
@@ -46,7 +46,7 @@
 			<div class="col-md-3 col-sm-6">
 				<div class="small-box bg-warning">
 					<div class="inner">
-						<h3>100</h3>
+						<h3><?= count($list_jenis_wisata) ?></h3>
 						<p>Jenis Tempat Wisata</p>
 					</div>
 					<div class="icon">
@@ -57,7 +57,7 @@
 			<div class="col-md-3 col-sm-6">
 				<div class="small-box bg-secondary">
 					<div class="inner">
-						<h3>100</h3>
+						<h3><?= count($list_kecamatan) ?></h3>
 						<p>Kecamatan</p>
 					</div>
 					<div class="icon">

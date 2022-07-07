@@ -83,6 +83,7 @@ class JenisWisata extends CI_Controller {
 	{
 		$data_post = $this->input->post();
 
+		$data['id'] = $data_post['id'];
 		$data['nama'] = $data_post['inNama'];
 
 		$this->jw->save($data, true);

@@ -8,6 +8,8 @@ class TempatWisata extends CI_Controller {
 		parent::__construct();
 		// Load model
 		$this->load->model('TempatWisata_model', 'tw');
+		$this->load->model('JenisWisata_model', 'jw');
+		$this->load->model('Kecamatan_model', 'k');
 	}
 	
 	public function index()
@@ -42,6 +44,9 @@ class TempatWisata extends CI_Controller {
 	{
 		$data['page'] = 'Tambah Tempat Wisata';
 		$data['isEdit'] = false;
+
+		$data['list_jenis_wisata'] = $this->jw->getAll();
+		$data['list_kecamatan'] = $this->k->getAll();
 		
 		$this->load->view('layouts/header', $data);
 		$this->load->view('layouts/navbar');
@@ -101,6 +106,7 @@ class TempatWisata extends CI_Controller {
 		$data_post = $this->input->post();
 
 		// Set data
+		$data['id'] = $data_post['id'];
 		$data['nama'] = $data_post['inNama'];
 		$data['alamat'] = $data_post['inAlamat'];
 		$data['latlong'] = $data_post['inLatlong'];

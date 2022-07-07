@@ -24,9 +24,9 @@
 		<!-- Content -->
 		<?php
 		if ($isEdit) {
-			form_open_multipart('tempatwisata/update', '', ['id' => $data->id]);
+			echo form_open_multipart('tempatwisata/update', '', ['id' => $data->id]);
 		} else {
-			form_open_multipart('tempatwisata/store');
+			echo form_open_multipart('tempatwisata/store');
 		}
 		?>
 			<div class="card">
@@ -46,8 +46,11 @@
 						<div class="col-md-6 col-12">
 							<div class="form-group">
 								<label for="inJenis" class="col-form-label">Jenis</label>
-								<select name="inJenis" id="inJenis" class="form-control">
-									<option value="1">Kolam Renang</option>
+								<select name="inJenis" id="inJenis" class="form-control" required>
+									<option value="" disabled selected>-- Select Jenis Wisata --</option>
+									<?php foreach($list_jenis_wisata as $jw) { ?>
+										<option value="<?= $jw->id ?>"><?= $jw->nama ?></option>
+									<?php } ?>
 								</select>
 							</div>
 						</div>
@@ -55,7 +58,10 @@
 							<div class="form-group">
 								<label for="inKecamatan" class="col-form-label">Kecamatan</label>
 								<select name="inKecamatan" id="inKecamatan" class="form-control">
-									<option value="1">Depok</option>
+								<option value="" disabled selected>-- Select Kecamatan --</option>
+									<?php foreach($list_kecamatan as $k) { ?>
+										<option value="<?= $k->id ?>"><?= $k->nama ?></option>
+									<?php } ?>
 								</select>
 							</div>
 						</div>
@@ -120,7 +126,7 @@
 					</div>
 				</div>
 			</div>
-		<?php form_close() ?>
+		<?= form_close() ?>
 		<!-- /.content -->
 
 	</section>
