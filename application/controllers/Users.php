@@ -18,7 +18,6 @@ class Users extends CI_Controller{
     }
 
     public function otentikasi(){
-        $this->users;
         $_username = $this->input->post('username');
         $_password = $this->input->post('password');
         
@@ -27,6 +26,11 @@ class Users extends CI_Controller{
             $this->session->set_userdata('USERNAME',$row->username);
             $this->session->set_userdata('ROLE',$row->role);
             $this->session->set_userdata('USER',$row);
+			$this->session->set_userdata('isLogin', true);
+
+			if ($this->session->userdata('ROLE') == 'administrator') {
+				redirect(base_url('home/admin'));
+			}
             redirect(base_url().'home');
         }else{//jika users tidak ada atau salah
             redirect(base_url().'Users/login?status=f');

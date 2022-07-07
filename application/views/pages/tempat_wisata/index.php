@@ -53,7 +53,6 @@
 								<td><?= $tw->skor_rating ?></td>
 								<td><?= $tw->harga_tiket ?></td>
 								<td>
-									<a href="./show/<?= $tw->id ?>" class="btn btn-sm btn-info"><i class="fas fa-eye"></i></a>
 									<a href="./edit?id=<?= $tw->id ?>" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></a>
 									<a href="./delete/<?= $tw->id ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
 								</td>

@@ -46,7 +46,6 @@
 								<td class="text-center"><?= $count ?></td>
 								<td><?= $jw->nama ?></td>
 								<td>
-									<a href="./show/<?= $jw->id ?>" class="btn btn-sm btn-info"><i class="fas fa-eye"></i></a>
 									<a href="./edit?id=<?= $jw->id ?>" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></a>
 									<a href="./delete/<?= $jw->id ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
 								</td>
