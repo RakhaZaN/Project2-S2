@@ -46,6 +46,11 @@ class Users_model extends CI_Model{
 		$query = $this->db->query($sql,$data);
 		return $query->row();
 	}
+
+	public function update($data){
+		$sql = "UPDATE users SET username=?,password=MD5(?),email=? WHERE id=?";
+		$this->db->query($sql,$data);
+	}
 }
 
 ?>
