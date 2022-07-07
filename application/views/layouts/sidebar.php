@@ -27,10 +27,42 @@
 				<!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 				<li class="nav-item">
-					<a href="<?= base_url('') ?>" class="nav-link active">
+					<a href="<?= base_url() ?>" class="nav-link active">
 						<i class="nav-icon fas fa-square"></i>
 						<p>
 							Dashboard
+						</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?= base_url('tempatwisata/') ?>" class="nav-link">
+						<i class="nav-icon fas fa-mountain"></i>
+						<p>
+							Tempat Wisata
+						</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?= base_url('jeniswisata/') ?>" class="nav-link">
+						<i class="nav-icon fas fa-list-ul"></i>
+						<p>
+							Jenis Wisata
+						</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?= base_url('kecamatan/') ?>" class="nav-link">
+						<i class="nav-icon fas fa-map"></i>
+						<p>
+							Kecamatan
+						</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?= base_url('kecamatan/') ?>" class="nav-link">
+						<i class="nav-icon fas fa-users"></i>
+						<p>
+							Akun
 						</p>
 					</a>
 				</li>
