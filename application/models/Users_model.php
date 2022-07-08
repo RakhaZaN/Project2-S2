@@ -19,15 +19,15 @@ class Users_model extends CI_Model{
 		return $query->row();
 	}
 
-	// public function save($data, $is_update=false)
-	// {
-	// 	// Query
-	// 	if ($is_update) {
-	// 		$this->db->update($this->table, $data, ['id' => $data['id']]);
-	// 	} else {
-	// 		$this->db->insert($this->table, $data);
-	// 	}
-	// }
+	public function insertOrUpdate($data, $is_update=false)
+	{
+		// Query
+		if ($is_update) {
+			$this->db->update($this->table, $data, ['id' => $data['id']]);
+		} else {
+			$this->db->insert($this->table, $data);
+		}
+	}
 
 	public function save($data){
 		$sql = "INSERT INTO users (username,password,email,created_at,last_login,status,role) VALUES (?,MD5(?),?,NOW(),NOW(),?,?)";

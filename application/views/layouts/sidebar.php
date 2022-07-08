@@ -72,10 +72,18 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?= base_url('user/') ?>" class="nav-link <?= $this->uri->segment(1) == 'user' ? 'active':'' ?>">
+					<a href="<?= base_url('users/') ?>" class="nav-link <?= $this->uri->segment(1) == 'users' ? 'active':'' ?>">
 						<i class="nav-icon fas fa-users"></i>
 						<p>
 							Akun
+						</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?= base_url() ?>" class="nav-link">
+						<i class="nav-icon fas fa-globe"></i>
+						<p>
+							Public
 						</p>
 					</a>
 				</li>

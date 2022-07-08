@@ -93,7 +93,9 @@ class JenisWisata extends CI_Controller {
 
 	public function delete($id)
 	{
-		return $this->tw->delete(array('id' => $id));
+		$this->tw->delete(array('id' => $id));
+
+		redirect(base_url('jeniswisata/'));
 	}
 
 }

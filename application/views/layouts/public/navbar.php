@@ -16,6 +16,11 @@
 				<li class="nav-item">
 					<a href="<?= base_url() ?>" class="nav-link">Home</a>
 				</li>
+				<?php if ($this->session->userdata('isLogin') && $this->session->userdata('ROLE') == 'administrator') { ?>
+					<li class="nav-item">
+						<a href="<?= base_url('home/admin/') ?>" class="nav-link">CMS</a>
+					</li>
+				<?php } ?>
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<?php if ($this->session->userdata('isLogin')) { ?>

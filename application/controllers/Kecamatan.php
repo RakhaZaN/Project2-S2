@@ -93,7 +93,9 @@ class kecamatan extends CI_Controller {
 
 	public function delete($id)
 	{
-		return $this->kc->delete(array('id' => $id));
+		$this->kc->delete(array('id' => $id));
+
+		redirect(base_url('kecamatan/'));
 	}
 
 }

@@ -9,7 +9,7 @@
 				<?php foreach ($list_tempat_wisata as $tw) { ?>
 					<div class="col-md-3 col-sm-12">
 						<div class="card overflow-hidden">
-							<img src="<?= base_url('public/img/photo1.png') ?>" alt="thumbnail" class="card-img-top">
+							<img src="<?= base_url('uploads/tempat-wisata/'.$tw->foto1) ?>" alt="thumbnail" class="card-img-top">
 							<div class="card-img-overlay text-right mr-n1 mt-n2">
 								<small class="badge badge-info"><?= $tw->jenis ?></small>
 							</div>
