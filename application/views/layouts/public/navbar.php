@@ -21,8 +21,8 @@
 				<?php if ($this->session->userdata('isLogin')) { ?>
 					<li class="nav-item dropdown user-menu">
 						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-							<img src="<?= base_url('public/img/user2-160x160.jpg') ?>" class="user-image img-circle elevation-2" alt="User Image">
 							<span class="d-none d-md-inline"><?= $this->session->userdata('USERNAME') ?></span>
+							<small class="badge badge-secondary" style="font-size: 0.5rem;"><?= $this->session->userdata('ROLE') ?></small>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
 							<div class="dropdown-divider"></div>
