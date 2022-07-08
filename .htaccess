@@ -1,5 +1,5 @@
 RewriteEngine on
-RewriteBase /
+RewriteBase /rakh21254ti/wisata-depok/
 # RewriteCond $1 !^(index\.php)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
