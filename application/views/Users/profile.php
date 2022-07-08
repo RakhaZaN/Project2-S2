@@ -7,24 +7,26 @@
 			<!-- Content -->
 			<div class="card">
 				<div class="card-body">
-					<?= form_open('Users/update', '', ['id'=> $this->session->userdata('USER')->id]) ?>
-					<div class="row">
-						<div class="col-md-6 col-12">
-							<div class="form-group">
-								<label for="inUsername" class="col-form-label">Username</label>
-								<input type="text" name="inUsername" id="inUsername" class="form-control" required>
+					<?= form_open('Users/updateProfile', '', ['id' => $this->session->userdata('USER')->id]) ?>
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-6 col-12">
+								<div class="form-group">
+									<label for="inUsername" class="col-form-label">Username</label>
+									<input type="text" name="inUsername" id="inUsername" class="form-control" value="<?= $user_login->username ?>" required>
+								</div>
 							</div>
-						</div>
-						<div class="col-md-6 col-12">
-							<div class="form-group">
-								<label for="inEmail" class="col-form-label">Email</label>
-								<input type="email" name="inEmail" id="inEmail" class="form-control" required>
+							<div class="col-md-6 col-12">
+								<div class="form-group">
+									<label for="inEmail" class="col-form-label">Email</label>
+									<input type="email" name="inEmail" id="inEmail" class="form-control" value="<?= $user_login->email ?>" required>
+								</div>
 							</div>
-						</div>
-						<div class="col-md-6 col-12">
-							<div class="form-group">
-								<label for="inPassword" class="col-form-label">Password</label>
-								<input type="password" name="inPassword" id="inPassword" class="form-control">
+							<div class="col-md-6 col-12">
+								<div class="form-group">
+									<label for="inPassword" class="col-form-label">Password</label>
+									<input type="password" name="inPassword" id="inPassword" class="form-control" placeholder="Isi jika ingin mengubah">
+								</div>
 							</div>
 						</div>
 					</div>

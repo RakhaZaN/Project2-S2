@@ -22,7 +22,7 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <?=form_open('Users/otentikasi')?>
+      <?= form_open('users/otentikasi') ?>
         <div class="input-group mb-3">
           <input type="text" class="form-control" name="username" placeholder="Username">
           <div class="input-group-append">
@@ -47,7 +47,7 @@
           </div>
           <!-- /.col -->
         </div>
-      <?=form_close()?>
+      <?= form_close() ?>
       <!-- /.social-auth-links -->
 
       

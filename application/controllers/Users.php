@@ -134,6 +134,9 @@ class Users extends CI_Controller{
 
     public function profile(){
         $data['page'] = "Profile User";
+
+		$data['user_login'] = $this->users->find($this->session->userdata('USER')->id);
+
         $this->load->view('layouts/public/header', $data);
         $this->load->view('layouts/public/navbar');
         $this->load->view('Users/profile', $data);
@@ -142,23 +145,22 @@ class Users extends CI_Controller{
 
     public function updateProfile(){
         
-        $_username = $this->input->post('username');
-        $_password = $this->input->post('password');
-        $_email = $this->input->post('email');
-        $_id_edit = $this->session->userdata('USER')->id;
+        $data_post = $this->input->post();
 
-        $data_update[] = $_username;
-        $data_update[] = $_password;
-        $data_update[] = $_email;
-        $data_update[] = $_id_edit;
+		$data['id'] = $data_post['id'];
+		$data['username'] = $data_post['inUsername'];
+		$data['email'] = $data_post['inEmail'];
+		if (strlen($data_post['inPassword']) != 0) {
+			$data['password'] = md5($data_post['inPassword']);
+		}
         
-        $this->users->update($data_update);
+		$this->users->insertOrUpdate($data, true);
+
         $row = $this->users->find($this->session->userdata('USER')->id);
         if(isset($row)){//Jika Users Ada
             $this->session->set_userdata('USERNAME',$row->username);
             $this->session->set_userdata('ROLE',$row->role);
             $this->session->set_userdata('USER',$row);
-            redirect(base_url().'Users/profile');
         }
 
         redirect(base_url().'Users/profile');
