@@ -7,6 +7,7 @@
 			<!-- Content -->
 			<div class="card">
 				<div class="card-body">
+					<?= form_open('users/update', '', ['id'=> $this->session->userdata('USER')->id]) ?>
 					<div class="row">
 						<div class="col-md-6 col-12">
 							<div class="form-group">
@@ -31,6 +32,7 @@
 						<a href="./" class="btn btn-secondary mr-2">Cancel</a>
 						<button type="submit" name="submit" class="btn btn-success">Simpan</button>
 					</div>
+					<?= form_close() ?>
 				</div>
 			</div>
 			<!-- /.content -->

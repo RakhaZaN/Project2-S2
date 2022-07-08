@@ -85,7 +85,7 @@ class TempatWisata extends CI_Controller {
 
 		$this->tw->save($data);
 
-		redirect(base_url('tempatwisata/'));
+		redirect(base_url('index.php/tempatwisata/'));
 	}
 
 	public function edit()
@@ -131,14 +131,14 @@ class TempatWisata extends CI_Controller {
 
 		$this->tw->save($data, true);
 
-		redirect(base_url('tempatwisata/'));
+		redirect(base_url('index.php/tempatwisata/'));
 	}
 
 	public function delete($id)
 	{
 		$this->tw->delete(array('id' => $id));
 
-		redirect(base_url('tempatwisata/'));
+		redirect(base_url('index.php/tempatwisata/'));
 	}
 
 }

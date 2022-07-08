@@ -4,7 +4,7 @@
 	<section class="content">
 		<div class="container">
 			<!-- Content -->
-			<a href="<?= base_url() ?>" class="btn btn-secondary btn-sm has-icon mb-3"><i class="fas fa-chevron-left mr-2"></i> Back</a>
+			<a href="<?= base_url('index.php') ?>" class="btn btn-secondary btn-sm has-icon mb-3"><i class="fas fa-chevron-left mr-2"></i> Back</a>
 			<div class="card">
 				<div class="card-header">
 					<div class="d-flex align-items-center justify-content-between">

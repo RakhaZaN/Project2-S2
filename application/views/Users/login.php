@@ -52,7 +52,7 @@
 
       
       <p class="mb-0 text-center mt-3">
-        <a href="<?=base_url('Users/daftar')?>">Register</a>
+        <a href="<?=base_url('index.php/Users/daftar/')?>">Register</a>
       </p>
     </div>
     <!-- /.login-card-body -->

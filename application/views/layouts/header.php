@@ -1,6 +1,6 @@
 <?php 
 if (!$this->session->has_userdata('isLogin') || !$this->session->userdata('isLogin') || $this->session->userdata('ROLE') != 'administrator') {
-	redirect(base_url());
+	redirect(base_url('index.php'));
 }
 ?>
 <!DOCTYPE html>

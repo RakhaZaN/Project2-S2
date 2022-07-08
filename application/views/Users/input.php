@@ -29,7 +29,7 @@
 			<div class="card">
 				<div class="card-header">
 					<div class="d-flex align-items-center justify-content-between">
-						<h3 class="card-title">Form Data Kecamatan</h3>
+						<h3 class="card-title">Form Data User</h3>
 					</div>
 				</div>
 				<div class="card-body">
