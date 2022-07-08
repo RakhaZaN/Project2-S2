@@ -1,5 +1,5 @@
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper p-5">
+<div class="content-wrapper py-5">
 
 	<!-- Main content -->
 	<div class="content">

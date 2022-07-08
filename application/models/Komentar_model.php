@@ -10,6 +10,16 @@ class Komentar_model extends CI_Model
 		return $query->result();
 	}
 
+	public function getBy($value, $field='wisata_id')
+	{
+		$this->db->select('komentar.*, users.username, nr.nama as nilai');
+		$this->db->join('users', 'users.id='.$this->table.'.users_id', 'left');
+		$this->db->join('nilai_rating nr', 'nr.id='.$this->table.'.nilai_rating_id', 'inner');
+		$this->db->where($field, $value);
+		$query = $this->db->get($this->table);
+		return $query->result();
+	}
+
 	public function find($value, $field = 'id')
 	{
 		// Query

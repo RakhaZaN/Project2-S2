@@ -1,11 +1,11 @@
 <!-- Main Footer -->
-<footer class="main-footer mt-5">
+<footer class="main-footer">
 	<!-- To the right -->
 	<div class="float-right d-none d-sm-inline">
-		Anything you want
+		Boku no Ngoding
 	</div>
 	<!-- Default to the left -->
-	<strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+	<strong>Project 2</strong> - Semester 2.
 </footer>
 </div>
 <!-- ./wrapper -->
@@ -16,8 +16,6 @@
 <script src="<?= base_url('public/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 <!-- AdminLTE App -->
 <script src="<?= base_url('public/js/adminlte.min.js') ?>"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="<?= base_url('public/js/demo.js') ?>"></script>
 </body>
 
 </html>

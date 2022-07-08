@@ -33,6 +33,13 @@ class TempatWisata extends CI_Controller {
 		$find = $this->tw->find($id);
 		$data['data'] = $find;
 
+		$this->load->model('Komentar_model', 'kom');
+		$data['komentar'] = $this->kom->getBy($id);
+		// var_dump($data['komentar']);die;
+
+		$this->load->model('Nilai_rating_model', 'nr');
+		$data['nilai'] = $this->nr->getAll();
+
 		$this->load->view('layouts/public/header', $data);
 		$this->load->view('layouts/public/navbar');
 		$this->load->view('pages/tempat_wisata/detail', $data);

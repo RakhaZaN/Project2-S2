@@ -1,27 +1,10 @@
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-	<!-- Content Header (Page header) -->
-	<section class="content-header">
-		<div class="container">
-			<div class="row mb-2">
-				<div class="col-sm-6">
-					<h1><?= $page ?></h1>
-				</div>
-				<div class="col-sm-6">
-					<ol class="breadcrumb float-sm-right">
-						<li class="breadcrumb-item"><a href="<?= base_url() ?>">Home</a></li>
-						<li class="breadcrumb-item active"><?= $page ?></li>
-					</ol>
-				</div>
-			</div>
-		</div><!-- /.container-fluid -->
-	</section>
-
+<div class="content-wrapper py-5">
 	<!-- Main content -->
 	<section class="content">
 		<div class="container">
 			<!-- Content -->
-			<a href="../../" class="btn btn-secondary btn-sm has-icon mb-3"><i class="fas fa-chevron-left mr-2"></i> Back</a>
+			<a href="<?= base_url() ?>" class="btn btn-secondary btn-sm has-icon mb-3"><i class="fas fa-chevron-left mr-2"></i> Back</a>
 			<div class="card">
 				<div class="card-header">
 					<div class="d-flex align-items-center justify-content-between">
@@ -34,13 +17,13 @@
 							<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 								<div class="carousel-inner">
 									<div class="carousel-item active" data-interval="1500">
-										<img src="<?= base_url('public/img/photo1.png') ?>" class="d-block w-100 rounded" alt="...">
+										<img src="<?= base_url('uploads/tempat-wisata/' . $data->foto1) ?>" class="d-block w-100 rounded" alt="...">
 									</div>
 									<div class="carousel-item" data-interval="1500">
-										<img src="<?= base_url('public/img/photo2.png') ?>" class="d-block w-100 rounded" alt="...">
+										<img src="<?= base_url('uploads/tempat-wisata/' . $data->foto2) ?>" class="d-block w-100 rounded" alt="...">
 									</div>
 									<div class="carousel-item" data-interval="1500">
-										<img src="<?= base_url('public/img/photo3.jpg') ?>" class="d-block w-100 rounded" alt="...">
+										<img src="<?= base_url('uploads/tempat-wisata/' . $data->foto3) ?>" class="d-block w-100 rounded" alt="...">
 									</div>
 								</div>
 							</div>
@@ -74,6 +57,57 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- komentar -->
+			<div class="card">
+				<div class="card-header">
+					<h3 class="card-title">Komentar</h3>
+				</div>
+				<div class="card-body">
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<?php if ($this->session->has_userdata('isLogin') && $this->session->userdata('isLogin')) { ?>
+								<?= form_open('komentar/store', '', [
+									'user_id' => $this->session->userdata('USER')->id,
+									'wisata_id' => $data->id,
+									'back_url' => current_url(),
+								]) ?>
+								<p class="card-text mb-3">Tinggalkan pesan dan kesanmu</p>
+								<div class="form-group">
+									<select name="nilai_rating" id="nilai_rating" class="form-control">
+										<option disabled selected>-- Select Rating --</option>
+										<?php foreach($nilai as $n) { ?>
+											<option value="<?= $n->id ?>"><?= $n->nama ?></option>
+										<?php } ?>
+									</select>
+								</div>
+								<div class="form-group">
+									<textarea name="komentar" id="komentar" rows="3" class="form-control" placeholder="Tulis komentar..."></textarea>
+								</div>
+								<button type="submit" class="btn btn-success">Kirim</button>
+								<?= form_close() ?>
+							<?php } else { ?>
+								<p class="card-text">Kamu harus login untuk bisa meninggalkan komentar.</p>
+								<a href="<?= base_url('users/login') ?>" class="btn btn-primary btn-sm">Login</a>
+							<?php } ?>
+						</div>
+						<div class="col">
+							<div class="overflow-auto" style="max-height: 16em;">
+								<?php foreach ($komentar as $kom) { ?>
+									<div class="row mb-3">
+										<div class="col">
+											<h6 class="mb-n1"><?= $kom->username ?></h6>
+											<small class="text-muted"><?= $kom->nilai ?></small>
+											<p class="card-text"><small><?= $kom->isi ?></small></p>
+										</div>
+									</div>
+								<?php } ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<!-- /.content -->
 		</div>
 	</section>
