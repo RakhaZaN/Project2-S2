@@ -1,8 +1,8 @@
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+<div class="content-wrapper py-5">
 	<!-- Main content -->
 	<section class="content">
-		
+
 		<div class="container">
 			<!-- Content -->
 			<div class="card">
