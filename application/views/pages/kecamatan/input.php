@@ -21,9 +21,9 @@
 
 		<?php
 		if ($isEdit) {
-			echo form_open('kecamatan/update', '', ['id' => $data->id]);
+			echo form_open('Kecamatan/update', '', ['id' => $data->id]);
 		} else {
-			echo form_open('kecamatan/store');
+			echo form_open('Kecamatan/store');
 		}
 		?>
 			<div class="card">

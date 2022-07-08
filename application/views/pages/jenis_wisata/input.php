@@ -24,9 +24,9 @@
 		<!-- Content -->
 		<?php
 		if ($isEdit) {
-			echo form_open('jeniswisata/update', '', ['id' => $data->id]);
+			echo form_open('JenisWisata/update', '', ['id' => $data->id]);
 		} else {
-			echo form_open('jeniswisata/store');
+			echo form_open('JenisWisata/store');
 		}
 		?>
 			<div class="card">

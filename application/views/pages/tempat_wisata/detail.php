@@ -4,7 +4,7 @@
 	<section class="content">
 		<div class="container">
 			<!-- Content -->
-			<a href="<?= base_url('index.php') ?>" class="btn btn-secondary btn-sm has-icon mb-3"><i class="fas fa-chevron-left mr-2"></i> Back</a>
+			<a href="<?= base_url() ?>" class="btn btn-secondary btn-sm has-icon mb-3"><i class="fas fa-chevron-left mr-2"></i> Back</a>
 			<div class="card">
 				<div class="card-header">
 					<div class="d-flex align-items-center justify-content-between">
@@ -67,7 +67,7 @@
 					<div class="row">
 						<div class="col-md-4 col-sm-12">
 							<?php if ($this->session->has_userdata('isLogin') && $this->session->userdata('isLogin')) { ?>
-								<?= form_open('komentar/store', '', [
+								<?= form_open('Komentar/store', '', [
 									'user_id' => $this->session->userdata('USER')->id,
 									'wisata_id' => $data->id,
 									'back_url' => current_url(),
@@ -88,7 +88,7 @@
 								<?= form_close() ?>
 							<?php } else { ?>
 								<p class="card-text">Kamu harus login untuk bisa meninggalkan komentar.</p>
-								<a href="<?= base_url('users/login') ?>" class="btn btn-primary btn-sm">Login</a>
+								<a href="<?= base_url('Users/login') ?>" class="btn btn-primary btn-sm">Login</a>
 							<?php } ?>
 						</div>
 						<div class="col">

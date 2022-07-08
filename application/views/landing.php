@@ -21,7 +21,7 @@
 							</div>
 							<div class="card-footer">
 								<div class="d-flex justify-content-center">
-									<a href="<?= base_url('index.php/tempatwisata/show/' . $tw->id) ?>" style="font-size: 0.8rem;" class="text-primary stretched-link">View Detail</a>
+									<a href="<?= base_url('TempatWisata/show/' . $tw->id) ?>" style="font-size: 0.8rem;" class="text-primary stretched-link">View Detail</a>
 								</div>
 							</div>
 						</div>

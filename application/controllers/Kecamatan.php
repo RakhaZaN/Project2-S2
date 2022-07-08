@@ -58,7 +58,7 @@ class kecamatan extends CI_Controller {
 
 		$this->kc->save($data);
 
-		redirect(base_url('index.php/kecamatan/'));
+		redirect(base_url('Kecamatan/'));
 	}
 
 	public function edit()
@@ -88,14 +88,14 @@ class kecamatan extends CI_Controller {
 
 		$this->kc->save($data, true);
 
-		redirect(base_url('index.php/kecamatan/'));
+		redirect(base_url('Kecamatan/'));
 	}
 
 	public function delete($id)
 	{
 		$this->kc->delete(array('id' => $id));
 
-		redirect(base_url('index.php/kecamatan/'));
+		redirect(base_url('Kecamatan/'));
 	}
 
 }

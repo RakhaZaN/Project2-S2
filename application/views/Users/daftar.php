@@ -57,7 +57,7 @@
           <!-- /.col -->
         </div>
       <?=form_close()?>
-      <a href="<?=base_url('index.php/Users/login/')?>" class="text-center">I already have a membership</a>
+      <a href="<?=base_url('Users/login')?>" class="text-center">I already have a membership</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->

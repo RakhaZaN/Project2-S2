@@ -7,7 +7,7 @@
 			<!-- Content -->
 			<div class="card">
 				<div class="card-body">
-					<?= form_open('users/update', '', ['id'=> $this->session->userdata('USER')->id]) ?>
+					<?= form_open('Users/update', '', ['id'=> $this->session->userdata('USER')->id]) ?>
 					<div class="row">
 						<div class="col-md-6 col-12">
 							<div class="form-group">

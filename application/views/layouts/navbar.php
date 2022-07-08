@@ -44,7 +44,7 @@
 				<small class="badge badge-secondary" style="font-size: 0.5rem;"><?= $this->session->userdata('ROLE') ?></small>
 			</a>
 			<div class="dropdown-menu dropdown-menu-right">
-				<a href="<?= base_url('index.php/users/logout') ?>" class="dropdown-item text-danger">
+				<a href="<?= base_url('Users/logout') ?>" class="dropdown-item text-danger">
 					<i class="fas fa-sign-out-alt mr-2"></i> Logout
 				</a>
 				<span class="dropdown-footer"></span>

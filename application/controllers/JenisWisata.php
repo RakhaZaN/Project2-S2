@@ -58,7 +58,7 @@ class JenisWisata extends CI_Controller {
 
 		$this->jw->save($data);
 
-		redirect(base_url('index.php/jeniswisata/'));
+		redirect(base_url('JenisWisata/'));
 	}
 
 	public function edit()
@@ -88,14 +88,14 @@ class JenisWisata extends CI_Controller {
 
 		$this->jw->save($data, true);
 
-		redirect(base_url('index.php/jeniswisata/'));
+		redirect(base_url('JenisWisata/'));
 	}
 
 	public function delete($id)
 	{
 		$this->tw->delete(array('id' => $id));
 
-		redirect(base_url('index.php/jeniswisata/'));
+		redirect(base_url('JenisWisata/'));
 	}
 
 }

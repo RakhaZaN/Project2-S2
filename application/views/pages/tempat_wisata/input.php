@@ -24,9 +24,9 @@
 		<!-- Content -->
 		<?php
 		if ($isEdit) {
-			echo form_open_multipart('tempatwisata/update', '', ['id' => $data->id]);
+			echo form_open_multipart('TempatWisata/update', '', ['id' => $data->id]);
 		} else {
-			echo form_open_multipart('tempatwisata/store');
+			echo form_open_multipart('TempatWisata/store');
 		}
 		?>
 			<div class="card">

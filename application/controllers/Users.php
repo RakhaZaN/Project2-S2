@@ -44,7 +44,7 @@ class Users extends CI_Controller{
 
 		$this->users->insertOrUpdate($data);
 
-		redirect(base_url('index.php/users/'));
+		redirect(base_url('Users/'));
 	}
 
 	public function edit(){
@@ -77,14 +77,14 @@ class Users extends CI_Controller{
 		
 		$this->users->insertOrUpdate($data, true);
 
-		redirect(base_url('index.php/users/'));
+		redirect(base_url('Users/'));
 	}
 
 	public function delete($id)
 	{
 		$this->users->delete($id);
 
-		redirect(base_url('index.php/users/'));
+		redirect(base_url('Users/'));
 	}
 
     public function login(){
@@ -108,9 +108,9 @@ class Users extends CI_Controller{
             $this->session->set_userdata('USER',$row);
 			$this->session->set_userdata('isLogin', true);
 			
-            redirect(base_url('index.php/home/'));
+            redirect(base_url());
         }else{//jika users tidak ada atau salah
-            redirect(base_url('index.php/Users/login?status=f'));
+            redirect(base_url().'Users/login?status=f');
         }
     }
 
@@ -129,7 +129,7 @@ class Users extends CI_Controller{
 
         $this->users->save($data_register);
 
-        redirect(base_url('index.php/Users/login'));
+        redirect(base_url().'Users/login');
     }
 
     public function profile(){
@@ -161,12 +161,12 @@ class Users extends CI_Controller{
             redirect(base_url().'Users/profile');
         }
 
-        redirect(base_url('inde.php/Users/profile'));
+        redirect(base_url().'Users/profile');
     }
 
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		redirect(base_url('index.php'));
+		redirect(base_url());
 	}
 }

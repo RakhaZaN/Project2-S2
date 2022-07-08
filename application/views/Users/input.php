@@ -21,9 +21,9 @@
 
 		<?php
 		if ($isEdit) {
-			echo form_open('users/update', '', ['id' => $data->id]);
+			echo form_open('Users/update', '', ['id' => $data->id]);
 		} else {
-			echo form_open('users/store');
+			echo form_open('Users/store');
 		}
 		?>
 			<div class="card">
