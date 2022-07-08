@@ -1,3 +1,8 @@
+<?php 
+if (!$this->session->has_userdata('isLogin') || !$this->session->userdata('isLogin') || $this->session->userdata('ROLE') != 'administrator') {
+	redirect(base_url());
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
