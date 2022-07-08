@@ -134,11 +134,10 @@ class Users extends CI_Controller{
 
     public function profile(){
         $data['page'] = "Profile User";
-        $this->load->view('layouts/header', $data);
-        $this->load->view('layouts/navbar');
-        $this->load->view('layouts/sidebar');
+        $this->load->view('layouts/public/header', $data);
+        $this->load->view('layouts/public/navbar');
         $this->load->view('Users/profile', $data);
-        $this->load->view('layouts/footer');
+        $this->load->view('layouts/public/footer');
     }
 
     public function updateProfile(){
